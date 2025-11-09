@@ -1,0 +1,338 @@
+.issue-board {
+  width: 100%;
+}
+
+.issue-board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-group select,
+.filter-group input {
+  padding: 8px 12px;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.filter-group input {
+  min-width: 250px;
+}
+
+.create-issue-form {
+  background: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.create-issue-form h3 {
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.create-issue-form .form-group {
+  margin-bottom: 16px;
+}
+
+.create-issue-form input,
+.create-issue-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.create-issue-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.kanban-board {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.kanban-column {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 16px;
+  min-height: 400px;
+}
+
+.kanban-column h3 {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e1e4e8;
+}
+
+.issues-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.issue-card {
+  background: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.issue-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.issue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.issue-id {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+}
+
+.issue-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  background: none;
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-icon:hover {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.issue-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.issue-description {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.issue-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.label-tag {
+  padding: 2px 6px;
+  background-color: #e1e4e8;
+  color: #333;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.issue-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.issue-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.issue-state {
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.issue-state.opened {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.issue-state.closed {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.issue-assignee {
+  color: #666;
+}
+
+.issue-state-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.btn-sm {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.comment-form {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e1e4e8;
+}
+
+.comment-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 60px;
+}
+
+.comment-form .form-actions {
+  margin-top: 8px;
+}
+
+/* Simple list view for overview */
+.issues-list-simple {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.issue-item-simple {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+}
+
+.issue-main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.issue-main .status-open {
+  color: #28a745;
+}
+
+.issue-main .status-closed {
+  color: #dc3545;
+}
+
+.issue-title {
+  font-size: 14px;
+  color: #333;
+}
+
+.issue-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.label-more {
+  font-size: 11px;
+  color: #666;
+  font-style: italic;
+}
+
+@media (max-width: 1024px) {
+  .kanban-board {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .issue-board-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  
+  .filters {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .filter-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filter-group input {
+    min-width: auto;
+  }
+  
+  .issue-item-simple {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .issue-meta {
+    align-self: stretch;
+    justify-content: space-between;
+  }
+}
