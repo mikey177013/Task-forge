@@ -1,1 +1,33 @@
-.
+image: node:16
+
+stages:
+  - test
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+    - frontend/node_modules/
+
+before_script:
+  - cd frontend
+  - npm install
+
+test:
+  stage: test
+  script:
+    - npm run build
+  only:
+    - main
+    - merge_requests
+
+pages:
+  stage: deploy
+  script:
+    - npm run build
+    - cp -r dist ../public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
