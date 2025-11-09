@@ -130,4 +130,4 @@ const AiSummary = ({ projectId, detailed = false }) => {
   );
 };
 
-export default AiSummary;
+export default AiSummary; 
